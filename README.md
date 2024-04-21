@@ -1,6 +1,6 @@
 # project-todo
 
-This template should help get you started developing with Vue 3 in Vite.
+A todo app built with Vue 3, Vite, and Tailwind CSS.
 
 ## Recommended IDE Setup
 
