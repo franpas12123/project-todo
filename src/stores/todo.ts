@@ -3,15 +3,15 @@ import { defineStore } from 'pinia'
 
 export const useTodoStore = defineStore('todo', () => {
   const todos = ref<Todo[]>([])
-  const addTodo = (title): Todo => {
+  const addTodo = (title: string): Todo => {
     const todo = { id: todos.value.length, title, done: false, active: true }
     todos.value.push(todo)
     return todo
   }
-  const toggleTodo = (index) => {
+  const toggleTodo = (index: number) => {
     todos.value[index].done = !todos.value[index].done
   }
-  const removeTodo = (index) => {
+  const removeTodo = (index: number) => {
     todos.value.splice(index, 1)
   }
   const seedTodos = () => {
