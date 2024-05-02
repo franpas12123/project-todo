@@ -18,4 +18,11 @@ describe('Todo Store', () => {
     todoStore.toggleTodo(0)
     expect(todoStore.todos[0].done).toBe(true)
   })
+
+  it('removes a todo', () => {
+    const todoStore = useTodoStore()
+    todoStore.addTodo('Learn Vue 3')
+    todoStore.removeTodo(0)
+    expect(todoStore.todos).toEqual([])
+  })
 })
