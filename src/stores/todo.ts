@@ -1,9 +1,13 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
+import { NO_TITLE } from '@/constants/error_msg'
 
 export const useTodoStore = defineStore('todo', () => {
   const todos = ref<Todo[]>([])
   const addTodo = (title: string): Todo => {
+    if (!title) {
+      throw new Error(NO_TITLE)
+    }
     const todo = { id: todos.value.length, title, done: false, active: true }
     todos.value.push(todo)
     return todo
