@@ -1,5 +1,6 @@
 @import "@flaticon/flaticon-uicons/css/all/all";
 @import './base.css';
+@import './card.css'
 
 @tailwind base;
 @tailwind components;
