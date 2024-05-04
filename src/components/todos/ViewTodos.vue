@@ -28,6 +28,7 @@ const todoLabelClass = (done: boolean) => {
               todo.title
             }}</label>
           </div>
+          <i class="fi fi-rr-trash" @click="todoStore.removeTodo(index)" alt="remove a todo" />
         </div>
       </div>
     </div>
