@@ -1,9 +1,10 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { NO_TITLE } from '@/constants/error_msg'
+import type { Todo, Todos } from '@/types/Todo'
 
 export const useTodoStore = defineStore('todo', () => {
-  const todos = ref<Todo[]>([])
+  const todos = ref<Todos>([])
   const addTodo = (title: string): Todo => {
     if (!title) {
       throw new Error(NO_TITLE)
